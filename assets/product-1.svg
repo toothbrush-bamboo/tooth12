@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7c7cc"/>
+      <stop offset="0.6" stop-color="#f1a0a9"/>
+      <stop offset="1" stop-color="#e57c89"/>
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <circle cx="320" cy="260" r="320" fill="url(#r)"/>
+  <g opacity="0.18" fill="#6b1d27">
+    <path d="M930 130c-70 30-90 150-10 205 88 61 52 154-25 196-56 31-82 67-85 119 73-63 167-68 250-26 83 42 127 111 130 205 41-73 43-152 5-228-42-85-32-155 18-221 62-83 43-180-63-250-72-48-150-47-220 0z"/>
+  </g>
+  <g transform="translate(110,120)">
+    <rect x="0" y="0" width="520" height="560" rx="26" fill="#ffffff" opacity="0.35"/>
+    <rect x="60" y="90" width="400" height="360" rx="20" fill="#ffffff" opacity="0.35"/>
+    <rect x="210" y="40" width="100" height="48" rx="12" fill="#ffffff" opacity="0.40"/>
+    <text x="64" y="520" font-family="Montserrat, Arial, sans-serif" font-size="44" font-weight="800" fill="#6b1d27" opacity="0.85">PRODUCT</text>
+    <text x="64" y="565" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="700" fill="#6b1d27" opacity="0.70">Placeholder image</text>
+  </g>
+</svg>
