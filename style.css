@@ -1,10 +1,13 @@
 :root {
-    --bg: #f4f4ee;
-    --surface: #eceee5;
-    --text-dark: #202020;
-    --text-muted: #575757;
-    --accent: #121212;
+    --bg: #f7f6f2;
+    --surface: #f0efe8;
+    --surface-2: #e8eadf;
+    --text: #1e1f1c;
+    --muted: #5a5a55;
+    --brand: #2f6b57;
+    --brand-2: #7fc8b1;
     --white: #ffffff;
+    --ring: rgba(47, 107, 87, 0.18);
 }
 
 * {
@@ -15,7 +18,7 @@
 
 body {
     background: #dbddd4;
-    color: var(--text-dark);
+    color: var(--text);
     font-family: "Montserrat", Arial, sans-serif;
     line-height: 1.5;
 }
@@ -25,6 +28,12 @@ body {
     margin: 0 auto;
     max-width: 1300px;
     width: 100%;
+}
+
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 .top-header {
@@ -42,7 +51,7 @@ body {
 }
 
 .top-nav a {
-    color: var(--text-dark);
+    color: var(--text);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -51,18 +60,21 @@ body {
 }
 
 .hero {
-    background:
-        radial-gradient(circle at 18% 40%, rgba(255, 255, 255, 0.22), transparent 55%),
-        radial-gradient(circle at 78% 25%, rgba(255, 255, 255, 0.16), transparent 60%),
-        linear-gradient(105deg, rgba(84, 7, 12, 0.86), rgba(224, 80, 90, 0.52));
-    min-height: 420px;
+    background: radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.32), transparent 55%),
+        radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.22), transparent 60%),
+        linear-gradient(115deg, rgba(22, 58, 48, 0.92), rgba(127, 200, 177, 0.55));
+    min-height: 520px;
     position: relative;
 }
 
 .hero-overlay {
-    background: radial-gradient(circle at 15% 45%, rgba(250, 218, 219, 0.35), transparent 50%);
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.06)),
+        url("assets/hero.png")
+        center 35%/cover no-repeat;
     inset: 0;
     position: absolute;
+    opacity: 1;
 }
 
 .hero-content {
@@ -86,7 +98,7 @@ body {
 
 .hero-cta {
     background: var(--white);
-    color: #2b3a35;
+    color: var(--brand);
     display: inline-block;
     font-size: 0.82rem;
     font-weight: 700;
@@ -95,6 +107,12 @@ body {
     padding: 10px 18px;
     text-decoration: none;
     text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.hero-cta:focus-visible {
+    outline: 4px solid var(--ring);
+    outline-offset: 3px;
 }
 
 main {
@@ -129,6 +147,7 @@ main {
     background: var(--surface);
     border: 1px solid #e4e6dc;
     padding: 10px;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .product-card img {
@@ -146,7 +165,7 @@ main {
 }
 
 .product-card a {
-    color: var(--text-muted);
+    color: var(--muted);
     display: inline-block;
     font-size: 0.66rem;
     font-weight: 600;
@@ -155,12 +174,18 @@ main {
     text-transform: uppercase;
 }
 
+.product-card:hover {
+    border-color: #d9dcd0;
+    box-shadow: 0 18px 50px rgba(19, 27, 21, 0.12);
+    transform: translateY(-2px);
+}
+
 .small img {
     height: 130px;
 }
 
 .story-grid {
-    background: var(--surface);
+    background: var(--surface-2);
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 18px;
@@ -197,7 +222,7 @@ main {
 }
 
 .story-content p {
-    color: var(--text-muted);
+    color: var(--muted);
     font-size: 0.82rem;
 }
 
